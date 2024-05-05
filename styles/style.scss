@@ -1,6 +1,7 @@
 .clearfix {
     clear: both;
 }/* 讓下層元素偵測得到浮起來的元素 */
+// 改用Bootstrap格線系統 
 
 $color-white: #fff;
 
@@ -14,25 +15,27 @@ body {
     /* body > main 區塊 */
     main {
         max-width: 1200px; /* 最大寬度1200px（視窗拉超過1200px寬度 此元素就不會再跟著變大了） */
-        margin-right: auto; 
-        margin-left: auto; /* margin-right和left都設auto，會有置中效果 */
-        margin-top: 25px;
-        margin-bottom: 25px;
-        /* margin: 25px auto; */
+        // margin-right: auto; 
+        // margin-left: auto; /* margin-right和left都設auto，會有置中效果 */
+        // margin-top: 25px;
+        // margin-bottom: 25px;
+        // /* margin: 25px auto; */ //簡寫
+        // 用Boostrap格線系統後 margin設定都失效，改用html的mt,mb類別 取代css的margin-top,margin-bottom設定
 
         /* 分配 info 與 content 左右區塊佔比 */
-        .info {
-            width: 28%;
-            float: left;
-            margin-right: 2%;
-        }
-        .content {
-            width: 70%;
-            float: left;
-            padding-left: 50px;
-            padding-right: 50px;
-            box-sizing: border-box; /* 這樣左右內邊界才會被包含在70%寬度中 否則會外加上去，寬度爆掉（超過外層元素寬度）就會跑到下一行，失去左右效果 */
-        }
+        // .info {
+        //     width: 28%;
+        //     float: left;
+        //     margin-right: 2%;
+        // }
+        // .content {
+        //     width: 70%;
+        //     float: left;
+        //     padding-left: 50px;
+        //     padding-right: 50px;
+        //     box-sizing: border-box; /* 這樣左右內邊界才會被包含在70%寬度中 否則會外加上去，寬度爆掉（超過外層元素寬度）就會跑到下一行，失去左右效果 */
+        // }
+        // 改用Bootstrap格線系統（取代float）
 
         /* 資訊欄info區塊（左半） */
         /* .info {
@@ -84,18 +87,19 @@ body {
                 border-radius: 0 0 7px 7px;
 
                 a {
-                    color: $color-white;
-                    background-color: #7dce9d;
+                    // color: $color-white;
+                    // background-color: #7dce9d;
                     font-size: 1.2em;
                     font-weight: 200;
-                    text-decoration: none;
-                    display: block; /* inline型元素(a) 沒辦法調長寬 所以要先改成 區塊型 */
+                    // text-decoration: none;
+                    // display: block; /* inline型元素(a) 沒辦法調長寬 所以要先改成 區塊型 */
                     width: 50%; /* 不用padding調左右寬度 是因為用padding配px的話 這個區塊就不會隨視窗大小改變寬度 */
-                    margin-left: auto;
-                    margin-right: auto; /* 這樣才能重新置中 */
-                    padding-top: 10px;
-                    padding-bottom: 10px;
-                    border-radius: 25px;
+                    // margin-left: auto;
+                    // margin-right: auto; /* 這樣才能重新置中 */
+                    // padding-top: 10px;
+                    // padding-bottom: 10px;
+                    // border-radius: 25px;
+                    // 改用Bootstrap做按鈕
                 }
             }
         }
@@ -124,8 +128,9 @@ body {
             .contacts-and-skills {
                 // contacts-and-skills區塊下的兩區塊
                 .contacts, .skills {
-                    width: 50%;
-                    float: left;/* contacts-and-skills區塊中 左右欄位分配 */
+                    // width: 50%;
+                    // float: left; /* contacts-and-skills區塊中 左右欄位分配 */
+                    // 改用Bootstrap格線系統(取代float)
                     h1 {
                         font-size: 1.5em;
                         font-weight: 200;

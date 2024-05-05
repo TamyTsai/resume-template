@@ -14,12 +14,6 @@ body {
 body main {
   max-width: 1200px;
   /* 最大寬度1200px（視窗拉超過1200px寬度 此元素就不會再跟著變大了） */
-  margin-right: auto;
-  margin-left: auto;
-  /* margin-right和left都設auto，會有置中效果 */
-  margin-top: 25px;
-  margin-bottom: 25px;
-  /* margin: 25px auto; */
   /* 分配 info 與 content 左右區塊佔比 */
   /* 資訊欄info區塊（左半） */
   /* .info {
@@ -27,19 +21,6 @@ body main {
   } */
   /* 這樣寫沒效果，因為沒有可以做圓角的標的物（要可看得到的區塊） */
   /* 內容欄content(右半) */
-}
-body main .info {
-  width: 28%;
-  float: left;
-  margin-right: 2%;
-}
-body main .content {
-  width: 70%;
-  float: left;
-  padding-left: 50px;
-  padding-right: 50px;
-  box-sizing: border-box;
-  /* 這樣左右內邊界才會被包含在70%寬度中 否則會外加上去，寬度爆掉（超過外層元素寬度）就會跑到下一行，失去左右效果 */
 }
 body main .info {
   /* 資訊欄info > bio 區塊  */
@@ -96,21 +77,10 @@ body main .info .download {
   border-radius: 0 0 7px 7px;
 }
 body main .info .download a {
-  color: #fff;
-  background-color: #7dce9d;
   font-size: 1.2em;
   font-weight: 200;
-  text-decoration: none;
-  display: block;
-  /* inline型元素(a) 沒辦法調長寬 所以要先改成 區塊型 */
   width: 50%;
   /* 不用padding調左右寬度 是因為用padding配px的話 這個區塊就不會隨視窗大小改變寬度 */
-  margin-left: auto;
-  margin-right: auto;
-  /* 這樣才能重新置中 */
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 25px;
 }
 body main .content {
   background: #fff;
@@ -131,11 +101,6 @@ body main .content .about p {
   color: gray;
   padding-bottom: 15px;
   /* p元素間的間距（p元素的底部內邊界） */
-}
-body main .content .contacts-and-skills .contacts, body main .content .contacts-and-skills .skills {
-  width: 50%;
-  float: left;
-  /* contacts-and-skills區塊中 左右欄位分配 */
 }
 body main .content .contacts-and-skills .contacts h1, body main .content .contacts-and-skills .skills h1 {
   font-size: 1.5em;
