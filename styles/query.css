@@ -1,0 +1,43 @@
+/* 視窗寬度 介於0px至580px之間時 會變成此樣式 */
+@media (min-width:0px) and (max-width: 580px) {
+
+    body main .info {
+        width: 96%;
+        margin-bottom: 20px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    body main .content {
+        width: 94%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    body main .contacts-and-skills .contacts , body main .contacts-and-skills .skills {
+        width: 95%;
+    }
+}
+
+/* 視窗寬度 小於等於767px時 會變成此樣式 */
+@media (max-width: 767px) {
+
+    body main .info {
+        width: 96%;
+        margin-bottom: 20px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    body main .content {
+        width: 94%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+
+/* 視窗寬度 介於768px至1200px之間時 會變成此樣式 */
+@media (min-width:768px) and (max-width: 1200px) {
+
+}
