@@ -1,158 +1,152 @@
+@charset "UTF-8";
 .clearfix {
-    clear: both;
-}/* 讓下層元素偵測得到浮起來的元素 */
+  clear: both;
+}
 
+/* 讓下層元素偵測得到浮起來的元素 */
 /* body（整體）區塊 */
-
 body {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
+  /* 整個頁面的背景顏色設在body 而非html裡 較恰當？ */
+  /* 如果沒有先nomalize的話，body中的背景顏色沒辦法填滿整個頁面，左右兩邊會留白 */
+  /* body > main 區塊 */
 }
-/* 整個頁面的背景顏色設在body 而非html裡 較恰當？ */
-/* 如果沒有先nomalize的話，body中的背景顏色沒辦法填滿整個頁面，左右兩邊會留白 */
-
-
-/* body > main 區塊 */
-
-main {
-    max-width: 1200px; /* 最大寬度1200px（視窗拉超過1200px寬度 此元素就不會再跟著變大了） */
-    margin-right: auto; 
-    margin-left: auto; /* margin-right和left都設auto，會有置中效果 */
-    margin-top: 25px;
-    margin-bottom: 25px;
-    /* margin: 25px auto; */
+body main {
+  max-width: 1200px;
+  /* 最大寬度1200px（視窗拉超過1200px寬度 此元素就不會再跟著變大了） */
+  margin-right: auto;
+  margin-left: auto;
+  /* margin-right和left都設auto，會有置中效果 */
+  margin-top: 25px;
+  margin-bottom: 25px;
+  /* margin: 25px auto; */
+  /* 分配 info 與 content 左右區塊佔比 */
+  /* 資訊欄info區塊（左半） */
+  /* .info {
+      border-radius: 7px;
+  } */
+  /* 這樣寫沒效果，因為沒有可以做圓角的標的物（要可看得到的區塊） */
+  /* 內容欄content(右半) */
 }
-
-/* 分配 info 與 content 左右區塊佔比 */
-
-main .info {
-    width: 28%;
-    float: left;
-    margin-right: 2%;
+body main .info {
+  width: 28%;
+  float: left;
+  margin-right: 2%;
 }
-
-main .content {
-    width: 70%;
-    float: left;
-    padding-left: 50px;
-    padding-right: 50px;
-    box-sizing: border-box; /* 這樣左右內邊界才會被包含在70%寬度中 否則會外加上去，寬度爆掉（超過外層元素寬度）就會跑到下一行，失去左右效果 */
+body main .content {
+  width: 70%;
+  float: left;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-sizing: border-box;
+  /* 這樣左右內邊界才會被包含在70%寬度中 否則會外加上去，寬度爆掉（超過外層元素寬度）就會跑到下一行，失去左右效果 */
 }
-
-
-/* 資訊欄info區塊（左半） */
-/* main .info {
-    border-radius: 7px;
-} */
-/* 這樣寫沒效果，因為沒有可以做圓角的標的物（要可看得到的區塊） */
-
-/* 資訊欄info > bio 區塊  */
-
-main .info .bio {
-    background-color: #7ab5ef;
-    text-align: center; /* 只對div這種元素有用 bio是div元素*/
-    border-radius: 7px 7px 0 0; /* 陰影效果 左上 右上 右下 左下（自左上開始 順時針繞一圈） */
+body main .info {
+  /* 資訊欄info > bio 區塊  */
+  /* info > download區塊*/
 }
-
-
-main .info .bio .avatar {
-    width: 200px;
-    height: 200px;
-    border-radius: 100px; /* 把圓角半徑設定為長寬的一半，就可以把元素變成圓 */
-    margin-top: 40px; /* avatar外邊界頂部 與 外層元素bio 間 留 40px空間 */
-    margin-bottom: 10px;
+body main .info .bio {
+  background-color: #7ab5ef;
+  text-align: center;
+  /* 只對div這種元素有用 bio是div元素*/
+  border-radius: 7px 7px 0 0;
+  /* 陰影效果 左上 右上 右下 左下（自左上開始 順時針繞一圈） */
 }
-
-main .info .bio h1 {
-    font-size: 2em; /* 字體大小 */
-    font-weight: 200; /* 字體粗細 */
+body main .info .bio .avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  /* 把圓角半徑設定為長寬的一半，就可以把元素變成圓 */
+  margin-top: 40px;
+  /* avatar外邊界頂部 與 外層元素bio 間 留 40px空間 */
+  margin-bottom: 10px;
 }
-
-main .info .bio h2 {
-    font-size: 1.2em; /* 字體大小 */
-    font-weight: 200; /* 字體粗細 */
-    color: white; /* 字體顏色 */
+body main .info .bio h1 {
+  font-size: 2em;
+  /* 字體大小 */
+  font-weight: 200;
+  /* 字體粗細 */
 }
-
-main .info .bio .social-links i {
-    font-size: 1.2em;
-    margin: 10px; /* 元素的外邊界上下左右都給10px */ /* 寫在margin-bottom下的話 會蓋掉其設定 */
-    margin-bottom: 15px; /* margin-bottom另外改成15px */ /* i 外邊界底部 與 外層元素bio 間 留 15px空間 */ /* 寫在footer(social-link上會沒效果) */
-    /* margin: 10px 15px 10px 10px; */
+body main .info .bio h2 {
+  font-size: 1.2em;
+  /* 字體大小 */
+  font-weight: 200;
+  /* 字體粗細 */
+  color: white;
+  /* 字體顏色 */
 }
-
-/* 資訊欄info > download 區塊  */
-
-main .info .download {
-    background-color: #fff;
-    text-align: center; /* download是div元素 可使用text-align */
-    padding-top: 30px;
-    padding-bottom: 30px; /* 給download區塊上下各30px的內邊界 */
-    border-radius: 0 0 7px 7px;
+body main .info .bio .social-links i {
+  font-size: 1.2em;
+  margin: 10px;
+  /* 元素的外邊界上下左右都給10px */
+  /* 寫在margin-bottom下的話 會蓋掉其設定 */
+  margin-bottom: 15px;
+  /* margin-bottom另外改成15px */
+  /* i 外邊界底部 與 外層元素bio 間 留 15px空間 */
+  /* 寫在footer(social-link上會沒效果) */
+  /* margin: 10px 15px 10px 10px; */
 }
-
-main .info .download a {
-    color: #fff;
-    background-color: #7dce9d;
-    font-size: 1.2em;
-    font-weight: 200;
-    text-decoration: none;
-    display: block; /* inline型元素(a) 沒辦法調長寬 所以要先改成 區塊型 */
-    width: 50%; /* 不用padding調左右寬度 是因為用padding配px的話 這個區塊就不會隨視窗大小改變寬度 */
-    margin-left: auto;
-    margin-right: auto; /* 這樣才能重新置中 */
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 25px;
+body main .info .download {
+  background-color: #fff;
+  text-align: center;
+  /* download是div元素 可使用text-align */
+  padding-top: 30px;
+  padding-bottom: 30px;
+  /* 給download區塊上下各30px的內邊界 */
+  border-radius: 0 0 7px 7px;
 }
-
-
-/* 內容欄content(右半) */
-
-main .content {
-    background: #fff;
-    border-radius: 7px;
-    box-shadow: 1px 1px 2px rgba(0,0,0,0.2), -1px -1px 2px rgba(0,0,0,0.2); /* 陰影效果 右邊寬度 下面寬度 模糊大小 顏色, 右邊寬度（負號代表左邊） 下面寬度（負號代表上面） 模糊大小 顏色 */ /*用逗點隔開多組陰影*/
+body main .info .download a {
+  color: #fff;
+  background-color: #7dce9d;
+  font-size: 1.2em;
+  font-weight: 200;
+  text-decoration: none;
+  display: block;
+  /* inline型元素(a) 沒辦法調長寬 所以要先改成 區塊型 */
+  width: 50%;
+  /* 不用padding調左右寬度 是因為用padding配px的話 這個區塊就不會隨視窗大小改變寬度 */
+  margin-left: auto;
+  margin-right: auto;
+  /* 這樣才能重新置中 */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 25px;
 }
-
-
-/* 內容欄content > about區塊 */
-
-main .content .about h1 {
-    font-weight: 200;
-    margin-top: 35px;
+body main .content {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), -1px -1px 2px rgba(0, 0, 0, 0.2);
+  /* 陰影效果 右邊寬度 下面寬度 模糊大小 顏色, 右邊寬度（負號代表左邊） 下面寬度（負號代表上面） 模糊大小 顏色 */
+  /*用逗點隔開多組陰影*/
+  /* 內容欄content > about區塊 */
+  /* 內容欄content > contacts-and-skills區塊 */
 }
-
-main .content .about p {
-    line-height: 25px; /* 行間間距 */
-    color: gray;
-    padding-bottom: 15px; /* p元素間的間距（p元素的底部內邊界） */
+body main .content .about h1 {
+  font-weight: 200;
+  margin-top: 35px;
 }
-
-/* 內容欄content > contacts-and-skills區塊 */
-
-/* contacts-and-skills區塊中 左右欄位分配 */
-
-main .content .contacts-and-skills .contacts, main .content .contacts-and-skills .skills {
-    width: 50%;
-    float: left;
+body main .content .about p {
+  line-height: 25px;
+  /* 行間間距 */
+  color: gray;
+  padding-bottom: 15px;
+  /* p元素間的間距（p元素的底部內邊界） */
 }
-
-main .content .contacts-and-skills .contacts h1, main .content .contacts-and-skills .skills h1 {
-    font-size: 1.5em;
-    font-weight: 200;
+body main .content .contacts-and-skills .contacts, body main .content .contacts-and-skills .skills {
+  width: 50%;
+  float: left;
+  /* contacts-and-skills區塊中 左右欄位分配 */
 }
-
-main .content .contacts-and-skills .contacts li, main .content .contacts-and-skills .skills li {
-    line-height: 40px;
-    font-weight: 300px;
+body main .content .contacts-and-skills .contacts h1, body main .content .contacts-and-skills .skills h1 {
+  font-size: 1.5em;
+  font-weight: 200;
 }
-
-main .content .contacts-and-skills .contacts i, main .content .contacts-and-skills .skills i {
-    font-size: 1.2em;
-    color: gray;
-    margin-right: 10px;
+body main .content .contacts-and-skills .contacts li, body main .content .contacts-and-skills .skills li {
+  line-height: 40px;
+  font-weight: 300px;
 }
-
-
-
-
+body main .content .contacts-and-skills .contacts i, body main .content .contacts-and-skills .skills i {
+  font-size: 1.2em;
+  color: gray;
+  margin-right: 10px;
+}
