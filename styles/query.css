@@ -1,25 +1,16 @@
-/* 視窗寬度 介於0px至580px之間時 會變成此樣式 */
-@media (min-width:0px) and (max-width: 580px) {
+/* 視窗寬度 介於994px至1200px之間時 會變成此樣式 */
+@media (min-width:994px) and (max-width: 1200px) {
 
-    body main .info {
-        width: 96%;
-        margin-bottom: 20px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    body main .content {
-        width: 94%;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    body main .contacts-and-skills .contacts , body main .contacts-and-skills .skills {
-        width: 95%;
-    }
 }
 
-/* 視窗寬度 小於等於767px時 會變成此樣式 */
+/* 視窗寬度 介於768px至993px之間時 會變成此樣式 */
+@media (min-width: 768px) and (max-width: 993px) {
+    body main .info .download a {
+        font-size: 1em;
+    } /* 避免下載履歷字樣被擠成兩行 */
+}
+
+/* 視窗寬度 小於等於767px時（包含小於等於580px時） 會變成此樣式 */
 @media (max-width: 767px) {
 
     body main .info {
@@ -34,10 +25,31 @@
         margin-right: auto;
         margin-left: auto;
     }
+    /* info與content區塊垂直排列 */
+}
+
+/* 視窗寬度 小於等於580px時 會變成此樣式 */
+@media (max-width: 580px) {
+
+    /* body main .info {
+        width: 96%;
+        margin-bottom: 20px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    body main .content {
+        width: 94%;
+        margin-right: auto;
+        margin-left: auto;
+    } */
+    /* max767的設定已經有讓info與content垂直排列的效果 因為此區塊也<767所以不用重複寫 只要新增contact與skills的垂直效果即可*/
+
+    body main .contacts-and-skills .contacts , body main .contacts-and-skills .skills {
+        width: 95%;
+    }
+    /* contact與skills區塊垂直排列 */
 }
 
 
-/* 視窗寬度 介於768px至1200px之間時 會變成此樣式 */
-@media (min-width:768px) and (max-width: 1200px) {
 
-}
