@@ -1,4 +1,5 @@
 ## 簡介
+- [Demo Link](https://tamytsai.github.io/resume-template/)
 - 本專案為履歷模版
 - 以HTML及CSS撰寫，為一頁式靜態網頁
 - 其中應用Normalize解決不同瀏覽器預設CSS樣式不同的問題
