@@ -22,6 +22,8 @@
 ### 瀏覽器畫面
 ![截圖 2024-05-08 專案畫面1920*1080](https://github.com/TamyTsai/resume-template/assets/97825677/f7749096-ad77-4646-a6f8-6b0edd158954)
 
+<hr>
+
 ### 行動裝置畫面
 #### 直向
 ![截圖 2024-05-08 IphoneSE 直](https://github.com/TamyTsai/resume-template/assets/97825677/abcb60ad-4e51-4b3e-b422-30feca348778)
